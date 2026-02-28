@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div#parent { /* Declaration or "selector" */
+   /* border: 1px solid black;*/
+    width: 780px;
+    height: 812px;
+    margin: auto;
+}
+
+div#parent section {
+    /*border: 1px solid black;
+    */
+}
+
+section.sub-head {
+    /*background: url('files/histHomepic.jpg') top left no-repeat;*/
+    background-image: url('files/histHomepic.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+}
+
+section.main-content-area { /* declaration for a section tag whose class is "main-content-area" */
+    min-height: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("files/uofu_medallion_rt.gif");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    padding: 0 15px 40px 15px;
+
+
+
+
+    nav.secondary { /* applies to all nav tags found inside (descendants of) section.main-content-area */
+        height: 16px;
+        /*border: 1px dotted red;*/
+        /*text-align: right;*/
+        padding-right: 20px;
+        padding-top: 4px;
+        margin-bottom:0;
+        font-size: 9px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 3px;
+
+       /* img source = url('files/uofu_medallion_rt.gif'); {
+            height: fit-content;
+        }*/
+
+
+        a { /* this targets all links in each of our navs */
+            margin: 0;
+            color: black;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &:hover { /* Pseudo-class declaration */
+                text-decoration: underline;
+
+
+            }
+        }
+
+
+        &.bottom {
+            font-size: 7px;
+            position: relative;
+            bottom: -38px;
+            padding: 0;
+
+
+            a {
+                text-transform: lowercase;
+            }
+        }
+    }
+
+    section.brown-box {
+        background-color: #BEC3A1;
+        padding: 20px 0 20px 20px;
+        border-radius: 10px;
+        /*min-height: 400px;*/
+        height: 480px;
+        display: flex;
+        flex-direction: row;
+        justify-self: start;
+        margin: 0;
+
+        > * {
+            /*margin: 10px;*/
+        }
+
+        .left-side {
+            width: 28%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0 30px 0 0;
+
+
+            > * {
+                /*border: 3px solid black;*/
+            }
+
+            nav {
+                /*min-height: 60%;*/
+
+                a {
+                    color: black;
+                    display: block;
+                    text-decoration: none;
+                    border-bottom: 1px solid #60663E;
+                    padding: 10px 0 8px 12px;
+                    margin-left: 25px;
+                    text-transform: uppercase;
+                    font-size: 10px;
+
+                    &:hover {
+                        color: white;
+                        background-color: #60663E;
+                    }
+                }
+            }
+
+            .links {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+        }
+
+        .right-side {
+            width: 62%;
+            height: 415px;
+            background-color: white;
+            padding: 10px;
+            margin-left: 2px;
+
+
+            img {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+
+            p {
+                font-size: 11px;
+                text-align: justify;
+                margin: 0;
+            }
+
+
+            div.more {
+                /*text-align: right;*/
+                display: flex;
+                justify-content: flex-end;
+
+                a {
+                    color: darkred;
+                    text-decoration: none;
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    margin: 5px 5px;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.footer {
+    background-color: #60663E;
+    text-align: center;
+    color: white;
+    font-size: 8px;
+    padding: 8px 0;
+    width: 100%;
+    /*position: relative;
+    bottom: -45px;*/
+
+}
+
+
+h4 {
+    color: #60663E;
+    border-bottom: 1px dashed darkred;
+    font-weight: unset;
+    margin: 0 0 5px 0;
+}
